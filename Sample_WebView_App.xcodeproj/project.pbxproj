@@ -17,6 +17,7 @@
 		BCFB7B702CFF2EE30018649D /* Sample_WebView_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB7B6F2CFF2EE30018649D /* Sample_WebView_AppUITests.swift */; };
 		BCFB7B722CFF2EE30018649D /* Sample_WebView_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB7B712CFF2EE30018649D /* Sample_WebView_AppUITestsLaunchTests.swift */; };
 		BCFB7BBB2CFF3ABF0018649D /* TestWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB7BBA2CFF3ABF0018649D /* TestWebViewController.swift */; };
+		BCFB7BBE2CFF4D170018649D /* Sample_WebView_SDK in Frameworks */ = {isa = PBXBuildFile; productRef = BCFB7BBD2CFF4D170018649D /* Sample_WebView_SDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCFB7BBE2CFF4D170018649D /* Sample_WebView_SDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +148,9 @@
 			dependencies = (
 			);
 			name = Sample_WebView_App;
+			packageProductDependencies = (
+				BCFB7BBD2CFF4D170018649D /* Sample_WebView_SDK */,
+			);
 			productName = Sample_WebView_App;
 			productReference = BCFB7B4B2CFF2EE10018649D /* Sample_WebView_App.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +223,9 @@
 				Base,
 			);
 			mainGroup = BCFB7B422CFF2EE10018649D;
+			packageReferences = (
+				BCFB7BBC2CFF4D170018649D /* XCRemoteSwiftPackageReference "Sample_WebView_SDK" */,
+			);
 			productRefGroup = BCFB7B4C2CFF2EE10018649D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -611,6 +619,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BCFB7BBC2CFF4D170018649D /* XCRemoteSwiftPackageReference "Sample_WebView_SDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Takamasa-Fukase/Sample_WebView_SDK";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BCFB7BBD2CFF4D170018649D /* Sample_WebView_SDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCFB7BBC2CFF4D170018649D /* XCRemoteSwiftPackageReference "Sample_WebView_SDK" */;
+			productName = Sample_WebView_SDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BCFB7B432CFF2EE10018649D /* Project object */;
 }

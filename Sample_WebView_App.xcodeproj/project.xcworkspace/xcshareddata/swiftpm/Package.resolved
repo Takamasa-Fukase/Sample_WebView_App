@@ -1,0 +1,15 @@
+{
+  "originHash" : "3acfd557b9c25c201f63b640c63140d6ce9a53543c1b1ca961860e83015b5e8c",
+  "pins" : [
+    {
+      "identity" : "sample_webview_sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Takamasa-Fukase/Sample_WebView_SDK",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d92a38202bb3d5daec4e5b625ce14533c056d10f"
+      }
+    }
+  ],
+  "version" : 3
+}
