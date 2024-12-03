@@ -11,9 +11,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBAction func showTestWebViewButtonTapped(_ sender: Any) {
+        present(TestWebViewController(), animated: true)
+    }
+    
+    @IBAction func showWebViewButtonTapped(_ sender: Any) {
+        
+    }
 }
 

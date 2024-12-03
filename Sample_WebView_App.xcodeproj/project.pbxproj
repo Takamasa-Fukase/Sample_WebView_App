@@ -16,6 +16,7 @@
 		BCFB7B662CFF2EE30018649D /* Sample_WebView_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB7B652CFF2EE30018649D /* Sample_WebView_AppTests.swift */; };
 		BCFB7B702CFF2EE30018649D /* Sample_WebView_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB7B6F2CFF2EE30018649D /* Sample_WebView_AppUITests.swift */; };
 		BCFB7B722CFF2EE30018649D /* Sample_WebView_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB7B712CFF2EE30018649D /* Sample_WebView_AppUITestsLaunchTests.swift */; };
+		BCFB7BBB2CFF3ABF0018649D /* TestWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB7BBA2CFF3ABF0018649D /* TestWebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BCFB7B6B2CFF2EE30018649D /* Sample_WebView_AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sample_WebView_AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFB7B6F2CFF2EE30018649D /* Sample_WebView_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample_WebView_AppUITests.swift; sourceTree = "<group>"; };
 		BCFB7B712CFF2EE30018649D /* Sample_WebView_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample_WebView_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BCFB7BBA2CFF3ABF0018649D /* TestWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				BCFB7B502CFF2EE10018649D /* SceneDelegate.swift */,
 				BCFB7B522CFF2EE10018649D /* ViewController.swift */,
 				BCFB7B542CFF2EE10018649D /* Main.storyboard */,
+				BCFB7BBA2CFF3ABF0018649D /* TestWebViewController.swift */,
 				BCFB7B572CFF2EE30018649D /* Assets.xcassets */,
 				BCFB7B592CFF2EE30018649D /* LaunchScreen.storyboard */,
 				BCFB7B5C2CFF2EE30018649D /* Info.plist */,
@@ -261,6 +264,7 @@
 				BCFB7B532CFF2EE10018649D /* ViewController.swift in Sources */,
 				BCFB7B4F2CFF2EE10018649D /* AppDelegate.swift in Sources */,
 				BCFB7B512CFF2EE10018649D /* SceneDelegate.swift in Sources */,
+				BCFB7BBB2CFF3ABF0018649D /* TestWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
