@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>WebViewとSwiftの連携</title>
+    <script>
+        function notifyApp() {
+            // Swift側に通知を送る
+            window.webkit.messageHandlers.dismissVC.postMessage("close");
+        }
+    </script>
+</head>
+<body>
+    <h1>WebViewからSwiftに通知するデモ</h1>
+    <button onclick="notifyApp()">閉じる</button>
+</body>
+</html>
