@@ -14,7 +14,12 @@ class TestWebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let contentController = WKUserContentController()
+        contentController.add(self, name: "dismissVC")
+        
         let webConfiguration = WKWebViewConfiguration()
+        webConfiguration.userContentController = contentController
+        
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView?.uiDelegate = self
         webView?.navigationDelegate = self
@@ -32,4 +37,18 @@ extension TestWebViewController: WKUIDelegate {
 
 extension TestWebViewController: WKNavigationDelegate {
     
+}
+
+extension TestWebViewController: WKScriptMessageHandler {
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        print("didReceive message: \(message)")
+        if message.name == "dismissVC",
+           message.body as? String == "close" {
+            print("closeだった")
+            dismiss(animated: true)
+            
+        } else {
+            print("closeじゃない")
+        }
+    }
 }

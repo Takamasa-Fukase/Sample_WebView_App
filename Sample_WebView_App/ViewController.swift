@@ -14,7 +14,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showTestWebViewButtonTapped(_ sender: Any) {
-        present(TestWebViewController(), animated: true)
+        let vc = TestWebViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     @IBAction func showWebViewButtonTapped(_ sender: Any) {
