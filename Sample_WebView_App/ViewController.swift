@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Sample_WebView_SDK
 
 class ViewController: UIViewController {
 
@@ -14,13 +15,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showTestWebViewButtonTapped(_ sender: Any) {
-        let vc = TestWebViewController()
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+//        let vc = TestWebViewController()
+//        vc.modalPresentationStyle = .fullScreen
+//        present(vc, animated: true)
     }
     
     @IBAction func showWebViewButtonTapped(_ sender: Any) {
-        
+        let sdk = WebViewSDK()
+        sdk.openWebView(withPresenting: self)
     }
 }
 
