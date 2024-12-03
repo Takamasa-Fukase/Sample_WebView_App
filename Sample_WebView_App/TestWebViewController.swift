@@ -20,7 +20,7 @@ class TestWebViewController: UIViewController {
         webView?.navigationDelegate = self
         view = webView
         
-        guard let url = URL(string: "https://www.apple.com") else { return }
+        guard let url = URL(string: "https://takamasa-fukase.github.io/Sample_WebView_App/test_web_view.html") else { return }
         let request = URLRequest(url: url)
         webView?.load(request)
     }
