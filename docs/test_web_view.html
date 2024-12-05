@@ -40,7 +40,14 @@
     </style>
     <script>
         function notifyApp() {
+            alert('nofifyApp()を実行します');
+            console.log('nofifyApp()を実行します');
             window.webkit.messageHandlers.dismissVC.postMessage("close");
+            alert('postMessage close 完了');
+            console.log('postMessage close 完了');
+            const text = window.webkit.messageHandlers.dismissVC2.postMessage("close2");
+            alert(`postMessage close2 完了 textの中身: ${text}`);
+            console.log(`postMessage close2 完了 textの中身: ${text}`);
         }
     </script>
 </head>
