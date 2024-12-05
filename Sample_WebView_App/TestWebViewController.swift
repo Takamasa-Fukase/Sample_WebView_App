@@ -16,7 +16,6 @@ class TestWebViewController: UIViewController {
         
         let contentController = WKUserContentController()
         contentController.add(self, name: "dismissVC")
-//        contentController.add(self, name: "dismissVC2")
         contentController.addScriptMessageHandler(self, contentWorld: .page, name: "dismissVC2")
         contentController.add(self, name: "dismissVC3")
 
@@ -37,33 +36,15 @@ class TestWebViewController: UIViewController {
 extension TestWebViewController: WKScriptMessageHandler {
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         print("didReceive name: \(message.name), body: \(message.body)")
-//        if message.name == "dismissVC",
-//           message.body as? String == "close" {
-//            print("closeだった")
-//            dismiss(animated: true)
-//            
-//        } else {
-//            print("closeじゃない")
-//        }
     }
 }
 
 extension TestWebViewController: WKScriptMessageHandlerWithReply {
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage, replyHandler: @escaping (Any?, String?) -> Void) {
         print("didReceiveWithReply name: \(message.name), body: \(message.body)")
-//        if message.name == "dismissVC",
-//           message.body as? String == "close" {
-//            print("closeだった")
-//            dismiss(animated: true)
-//            
-//        } else {
-//            print("closeじゃない")
-//        }
         
         let text = "Swiftからの値だよ~~\(Bundle.main.bundleIdentifier)"
         print("replayHandler呼びます 送る文字列: \(text)")
-        
-//        replyHandler(text, nil)
         
 //        replyHandler(["result": text], nil)
         
