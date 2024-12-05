@@ -16,7 +16,8 @@ class TestWebViewController: UIViewController {
         
         let contentController = WKUserContentController()
         contentController.add(self, name: "dismissVC")
-        contentController.add(self, name: "dismissVC2")
+//        contentController.add(self, name: "dismissVC2")
+        contentController.addScriptMessageHandler(self, contentWorld: .page, name: "dismissVC2")
         contentController.add(self, name: "dismissVC3")
 
         let webConfiguration = WKWebViewConfiguration()
@@ -63,6 +64,7 @@ extension TestWebViewController: WKScriptMessageHandlerWithReply {
         print("replayHandler呼びます 送る文字列: \(text)")
         
         replyHandler(text, nil)
+//        replyHandler(nil, "エラーだよー")
     }
 }
 
