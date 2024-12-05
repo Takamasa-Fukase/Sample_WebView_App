@@ -63,7 +63,10 @@ extension TestWebViewController: WKScriptMessageHandlerWithReply {
         let text = "Swiftからの値だよ~~\(Bundle.main.bundleIdentifier)"
         print("replayHandler呼びます 送る文字列: \(text)")
         
-        replyHandler(text, nil)
+//        replyHandler(text, nil)
+        
+//        replyHandler(["result": text], nil)
+        
 //        replyHandler(nil, "エラーだよー")
     }
 }
@@ -120,8 +123,27 @@ let htmlText = """
         // }
         const notifyApp = async () => {
             window.webkit.messageHandlers.dismissVC.postMessage("close");
-            const text = await window.webkit.messageHandlers.dismissVC2.postMessage("close2");
-            window.webkit.messageHandlers.dismissVC3.postMessage(`close3 textの中身: ${text}`);
+
+            // const text = await window.webkit.messageHandlers.dismissVC2.postMessage("close2");
+
+            try {
+                // Swiftからのレスポンスを取得
+                const response = await window.webkit.messageHandlers.dismissVC2.postMessage("close2");
+
+                // エラーが返された場合
+                if (response.error) {
+                    throw new Error(response.error);  // エラーをスローしてcatchに渡す
+                }
+
+                // 成功時の処理
+                console.log("成功:", response.result);  // 成功結果を処理する
+                window.webkit.messageHandlers.dismissVC3.postMessage(`成功でした : ${response.result}`);
+
+            } catch (error) {
+                // エラー処理
+                console.error("エラーが発生しました:", error.message);  // エラー内容をログに出力
+                window.webkit.messageHandlers.dismissVC3.postMessage(`エラーでした : ${error.message}`);
+            }
         }
     </script>
 </head>
