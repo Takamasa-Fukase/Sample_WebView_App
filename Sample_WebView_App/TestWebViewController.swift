@@ -46,7 +46,7 @@ extension TestWebViewController: WKScriptMessageHandlerWithReply {
         let text = "Swiftからの値だよ~~\(Bundle.main.bundleIdentifier)"
         print("replayHandler呼びます 送る文字列: \(text)")
         
-//        replyHandler(["result": text], nil)
+        replyHandler(["result": text], nil)
         
 //        replyHandler(nil, "エラーだよー")
     }
@@ -97,15 +97,8 @@ let htmlText = """
         }
     </style>
     <script>
-        // function notifyApp() {
-        //     window.webkit.messageHandlers.dismissVC.postMessage("close");
-        //     const text = window.webkit.messageHandlers.dismissVC2.postMessage("close2");
-        //     window.webkit.messageHandlers.dismissVC3.postMessage(`close3 textの中身: ${text}`);
-        // }
-        const notifyApp = async () => {
+        async function notifyApp() {
             window.webkit.messageHandlers.dismissVC.postMessage("close");
-
-            // const text = await window.webkit.messageHandlers.dismissVC2.postMessage("close2");
 
             try {
                 // Swiftからのレスポンスを取得
